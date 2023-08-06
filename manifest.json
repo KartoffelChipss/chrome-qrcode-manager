@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "QRCode Generator and Scanner",
+    "version": "1.0.0",
+    "description": "Create and scan QRCodes directly in your browser",
+    "icons": {
+        "16": "./img/icons/qrcode-16.png",
+        "19": "./img/icons/qrcode-19.png",
+        "38": "./img/icons/qrcode-38.png",
+        "48": "./img/icons/qrcode-48.png",
+        "128": "./img/icons/qrcode-128.png"
+    },
+    "action": {
+        "default_popup": "popup/main_popup.html",
+        "default_icon": "./img/icons/qrcode-48.png"
+    },
+    "permissions": [
+        "tabs",
+        "storage"
+    ]
+}
