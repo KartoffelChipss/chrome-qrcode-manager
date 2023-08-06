@@ -1,0 +1,11 @@
+{
+    "appName": {
+      "message": "QR Code Generator and Scanner"
+    },
+    "appDesc": {
+      "message": "Create and scan QR Codes directly in your browser. Decode QR Codes simply by uploading an image, taking a screesnhot or using your webcam!"
+    },
+    "test": {
+        "message": "Das ist ein test"
+    }
+}

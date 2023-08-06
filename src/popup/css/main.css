@@ -4,6 +4,7 @@
   --blue-1: #0fa3f7;
   --blue-2: #116a9e;
   --green-1: #00EAB6;
+  --danger: #DC4C64;
   --grey-1: #1c1d1f;
   --grey-2: #232527;
   --grey-3: #272727;
@@ -34,6 +35,7 @@ html {
 
 a:focus-visible,
 button:focus-visible,
+select:focus-visible,
 input[type=color]:focus-visible {
   outline: var(--blue-2) solid 3px;
   outline-offset: 1px;
@@ -106,6 +108,7 @@ body {
   font-weight: 600;
   margin: 0;
   transform: translateY(1px);
+  cursor: default;
 }
 .topBar a.icon {
   margin-right: 10px;
@@ -347,7 +350,7 @@ body {
   transition: max-height 0.3s ease-out, padding 0.3s ease-out, margin 0.3s ease-in;
 }
 .qrCodeScanSec.shown {
-  max-height: 500px;
+  max-height: 600px;
   padding: var(--padding);
   margin-bottom: 15px;
   transition: max-height 0.3s ease-in, padding 0.3s ease-out, margin 0.3s ease-in;
@@ -358,6 +361,7 @@ body {
   justify-content: space-evenly;
   width: 100%;
   border-radius: 7px;
+  margin-bottom: 15px;
 }
 .qrCodeScanSec .scanTop button {
   background-color: transparent;
@@ -382,4 +386,106 @@ body {
 }
 .qrCodeScanSec .scanTop button.selected {
   background-color: var(--blue-1);
+}
+.qrCodeScanSec .scanMain {
+  display: none;
+  flex-direction: column;
+}
+.qrCodeScanSec .scanMain.shown {
+  display: flex;
+}
+.qrCodeScanSec .scanMain img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 7px;
+}
+.qrCodeScanSec .scanMain input[type=file] {
+  display: none;
+}
+.qrCodeScanSec .scanMain .custom-file-upload {
+  border: none;
+  display: inline-block;
+  padding: 6px 0px;
+  cursor: pointer;
+  border: var(--blue-1) dashed 3px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: var(--white-1);
+}
+.qrCodeScanSec .scanMain .custom-file-upload svg {
+  height: 30px;
+  width: auto;
+  padding: 5px;
+  border-radius: 7px;
+  margin: 0 3px;
+}
+.qrCodeScanSec .scanMain .custom-file-upload svg path, .qrCodeScanSec .scanMain .custom-file-upload svg circle, .qrCodeScanSec .scanMain .custom-file-upload svg g {
+  stroke-width: 1.7;
+}
+.qrCodeScanSec .scanMain #video-container {
+  width: 100%;
+}
+.qrCodeScanSec .scanMain #video-container .scan-region-highlight-svg,
+.qrCodeScanSec .scanMain #video-container .code-outline-highlight {
+  stroke: var(--blue-1) !important;
+}
+.qrCodeScanSec .scanMain #video-container video {
+  width: 100%;
+  height: auto;
+}
+.qrCodeScanSec .scanMain #cam-list {
+  background-color: #000;
+  width: calc(100% - 14px);
+  padding: 7px;
+  border-radius: 7px;
+  color: var(--white-1);
+  line-height: 1.5;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 15px;
+  font-weight: 600;
+  border: none;
+}
+.qrCodeScanSec .scanMain #cam-list:hover {
+  cursor: default;
+}
+.qrCodeScanSec .scanMain #cam-list:focus-visible {
+  outline: none;
+}
+.qrCodeScanSec .scanMain #cam-list option {
+  background-color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white-1);
+}
+.qrCodeScanSec .scanMain #noCamAccessBanner {
+  background-color: var(--danger);
+  border: solid 3px #a0293d;
+  border-radius: 7px;
+  padding: 7px;
+  text-align: center;
+  font-size: 14px;
+}
+.qrCodeScanSec .scanMain #noCamAccessBanner #noCamAccessBtn {
+  text-decoration: underline;
+}
+.qrCodeScanSec .scanMain #noCamAccessBanner #noCamAccessBtn:hover {
+  cursor: pointer;
+}
+.qrCodeScanSec .scanBottom {
+  margin-top: 15px;
+}
+.qrCodeScanSec .scanBottom #scan-output {
+  display: flex;
+  background-color: #000;
+  width: calc(100% - 14px);
+  padding: 7px;
+  border-radius: 7px;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+  font-size: 14px;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

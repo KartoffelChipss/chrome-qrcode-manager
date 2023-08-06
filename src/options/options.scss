@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --blue-1: #0fa3f7;
+    --blue-2: #116a9e;
+    --green-1: #00EAB6;
+    --danger: #DC4C64;
+    --success: #14A44D;
+    --grey-1: #1c1d1f;
+    --grey-2: #232527;
+    --grey-3: #272727;
+    --grey-light: #666666;
+    --white-1: #f5f5f5;
+    --white-2: #cecece;
+    --navheight: 90px;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: min-content;
+}
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+input[type="color"]:focus-visible {
+    outline: var(--blue-2) solid 3px;
+    outline-offset: 1px;
+}
+
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: var(--grey-1);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 1.1;
+
+    color: var(--white-1);
+
+    display: block;
+
+    padding-top: 55px;
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 35px;
+    background-color: var(--grey-3);
+
+    img {
+        height: 16px;
+        width: auto;
+        margin: 0 7px;
+        margin-left: 15px;
+    }
+
+    h1 {
+        font-size: 13px;
+        font-weight: 600;
+        margin: 0;
+        transform: translateY(1px);
+        cursor: default;
+    }
+
+    a.icon {
+        margin-right: 10px;
+
+        svg {
+            height: 18px;
+            width: auto;
+        }
+
+        &:last-of-type {
+            margin-right: 15px;
+        }
+    }
+
+    .section {
+        display: flex;
+        align-items: center;
+    }
+}
+
+main {
+    padding-left: 15px;
+
+    .optionSec {
+        position: relative;
+        padding: 15px 0;
+        padding-left: 20px;
+        //border-left: var(--grey-light) 5px solid;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background-color: var(--grey-light);
+            border-radius: 3px;
+            z-index: 1;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .permissionBox {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+
+            span {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                margin-bottom: 15px;
+
+                svg {
+                    height: 20px;
+                    width: auto;
+                    margin-right: 5px;
+                }
+
+                &.success {
+                    color: var(--success);
+                }
+
+                &.err {
+                    color: var(--danger);
+
+                    svg {
+                        height: 18px;
+                    }
+                }
+            }
+        }
+
+        button {
+            background-color: var(--blue-1);
+            border: none;
+            padding: 10px;
+            border-radius: 7px;
+            color: var(--white-1);
+            font-size: 16px;
+            font-weight: 600;
+            transition: scale .2s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                scale: .95;
+            }
+        }
+    }
+}
+
+h1 {
+    font-size: 35px;
+}
