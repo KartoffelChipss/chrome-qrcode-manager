@@ -147,6 +147,72 @@ main .optionSec button:hover {
 main .optionSec button:active {
   scale: 0.95;
 }
+main .optionSec button.collapsible {
+  max-width: 90%;
+  width: 500px;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--white-1);
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  border-radius: 12px;
+  transition: filter 0.2s ease-in-out;
+}
+main .optionSec button.collapsible:active {
+  scale: 1;
+}
+main .optionSec button.collapsible.active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+main .optionSec .active,
+main .optionSec .collapsible:hover {
+  filter: brightness(0.9);
+}
+main .optionSec .collapsible:after {
+  content: "+";
+  font-size: 18px;
+  color: var(--white-1);
+  float: right;
+  margin-left: 5px;
+}
+main .optionSec .active:after {
+  content: "-";
+}
+main .optionSec .content {
+  padding: 0 18px;
+  background-color: rgba(255, 255, 255, 0.05);
+  max-width: calc(90% - 36px);
+  width: 464px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+main .optionSec .content ol {
+  padding: 0;
+  padding-left: 18px;
+}
+main .optionSec .content ol li {
+  font-size: 14px;
+  line-height: 1.8;
+}
+main .optionSec .content p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+main .optionSec .content img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  filter: drop-shadow(0px 0px 8px #111);
+}
 
 h1 {
   font-size: 35px;

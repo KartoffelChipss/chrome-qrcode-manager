@@ -5,7 +5,13 @@
     "appDesc": {
       "message": "Erstelle und scanne QR Codes direkt in deinem Browser. Scanne QR Codes ganz einfach, indem du ein Bild hochlädst, ein Bildschirmfoto machst oder deine Webcam benutzt!"
     },
-    "test": {
-        "message": "Das ist ein test"
+    "options_title": {
+      "message": "Einstellungen"
+    },
+    "options_webcam_title": {
+      "message": "Webcam Zugang"
+    },
+    "options_webcam_btn": {
+      "message": "Klicken, um Zugang zur Webcam zu gewähren"
     }
 }

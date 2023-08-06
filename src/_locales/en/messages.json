@@ -5,7 +5,13 @@
     "appDesc": {
       "message": "Create and scan QR Codes directly in your browser. Decode QR Codes simply by uploading an image, taking a screesnhot or using your webcam!"
     },
-    "test": {
-        "message": "Das ist ein test"
+    "options_title": {
+      "message": "Options"
+    },
+    "options_webcam_title": {
+      "message": "Webcam Access"
+    },
+    "options_webcam_btn": {
+      "message": "Click to grant video permission"
     }
 }

@@ -21,14 +21,30 @@
     </div>
 
     <main>
-        <h1>Options</h1>
+        <h1 data-locale="options_title">Options</h1>
 
         <div class="optionSec">
-            <h2>Webcam Access</h2>
+            <h2 data-locale="options_webcam_title">Webcam Access</h2>
 
             <div class="permissionBox">
                 <span id="videoPermlabel"></span>
-                <button id="requestVideoPermBtn">Click to grant video permission</button>
+                <button id="requestVideoPermBtn" data-locale="options_webcam_btn">Click to grant video permission</button>
+            </div>
+
+            <button type="button" class="collapsible">How to allow chrome to access your camera</button>
+            <div class="content">
+                <ol>
+                    <li>Open your Windows Settings</li>
+                    <li>Go to "Privacy & security > Camera"</li>
+                    <li>Enable "Camera access", "Let apps access your camera" and "Let desktop apps access your camera"</li>
+                    <li>Reload this page</li>
+                </ol>
+            </div>
+
+            <button type="button" class="collapsible">What if I already denied access?</button>
+            <div class="content">
+                <p>If you click the camera icon in the top right corner you can choose to allow access to your camera.</p>
+                <img src="../img/camera_access_btn.jpg">
             </div>
         </div>
     </main>

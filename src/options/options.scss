@@ -166,6 +166,83 @@ main {
                 scale: .95;
             }
         }
+
+        button.collapsible {
+            max-width: 90%;
+            width: 500px;
+            margin-top: 15px;
+            background-color: rgba(255, 255, 255, 15%);
+            color: var(--white-1);
+            cursor: pointer;
+            padding: 18px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            border-radius: 12px;
+            transition: filter .2s ease-in-out;
+
+            &:active {
+                scale: 1;
+            }
+
+            &.active {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+        
+        .active,
+        .collapsible:hover {
+            filter: brightness(0.9);
+        }
+
+        .collapsible:after {
+            content: "+";
+            font-size: 18px;
+            color: var(--white-1);
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "-";
+        }
+        
+        .content {
+            padding: 0 18px;
+            background-color: rgba(255, 255, 255, 5%);
+            max-width: calc(90% - 18px * 2);
+            width: calc(500px - 18px * 2);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+
+            ol {
+                padding: 0;
+                padding-left: 18px;
+
+                li {
+                    font-size: 14px;
+                    line-height: 1.8;
+                }
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+                margin-bottom: 18px;
+                filter: drop-shadow(0px 0px 8px #111);
+            }
+        }
     }
 }
 
