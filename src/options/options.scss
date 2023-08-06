@@ -165,6 +165,18 @@ main {
             &:active {
                 scale: .95;
             }
+
+            &.disabled {
+                filter: grayscale(1);
+
+                &:hover {
+                    cursor: default;
+                }
+                
+                &:active {
+                    scale: 1;
+                }
+            }
         }
 
         button.collapsible {

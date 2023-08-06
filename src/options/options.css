@@ -147,6 +147,15 @@ main .optionSec button:hover {
 main .optionSec button:active {
   scale: 0.95;
 }
+main .optionSec button.disabled {
+  filter: grayscale(1);
+}
+main .optionSec button.disabled:hover {
+  cursor: default;
+}
+main .optionSec button.disabled:active {
+  scale: 1;
+}
 main .optionSec button.collapsible {
   max-width: 90%;
   width: 500px;
