@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "QR Code Generator and Scanner",
     "version": "1.0.0",
-    "description": "Create and scan QR Codes directly in your browser. Decode QR Codes simply by uploading an image, taking a screesnhot or using your webcam!",
+    "description": "Create and scan QR Codes directly in your browser. Decode QR Codes by uploading an image, taking a screesnhot or using your webcam!",
     "default_locale": "en",
     "icons": {
         "16": "./img/icons/qrcode-16.png",

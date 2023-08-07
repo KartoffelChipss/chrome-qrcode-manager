@@ -3,7 +3,7 @@
       "message": "QR Code Generator and Scanner"
     },
     "appDesc": {
-      "message": "Create and scan QR Codes directly in your browser. Decode QR Codes simply by uploading an image, taking a screesnhot or using your webcam!"
+      "message": "Create and scan QR Codes directly in your browser. Decode QR Codes by uploading an image, taking a screesnhot or using your webcam!"
     },
     "options_title": {
       "message": "Options"
