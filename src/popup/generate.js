@@ -136,6 +136,11 @@ qr_copyUrlBtn.addEventListener("click", (event) => {
 
 document.querySelector(".topBar").querySelectorAll(".icon").forEach((icon) => {
     icon.addEventListener("click", (event) => {
+        if (icon.classList.contains("settingsicon")) {
+            chrome.tabs.create({ 'url': `chrome-extension://${chrome.runtime.id}/options/options.html` });
+            return;
+        }
+
         chrome.tabs.create({ url: icon.getAttribute("href") });
     });
 })
