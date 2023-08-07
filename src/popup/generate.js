@@ -16,6 +16,14 @@ const banner = document.getElementById("banner");
 
 let copyLink = "none";
 
+function getLocale(key) {
+    return chrome.i18n.getMessage(key);
+}
+
+document.querySelectorAll('[data-locale]').forEach(elem => {
+    elem.innerText = chrome.i18n.getMessage(elem.dataset.locale)
+});
+
 function showBanner(text, showTime) {
     banner.innerText = text;
     banner.classList.add("active");
@@ -123,7 +131,7 @@ qr_color_second.addEventListener("input", (event) => {
 qr_copyUrlBtn.addEventListener("click", (event) => {
     console.log(copyLink)
     navigator.clipboard.writeText(copyLink);
-    showBanner("Copied URL to clipboard!", 2 * 1000);
+    showBanner(getLocale("copiedtoclip"), 2 * 1000);
 });
 
 document.querySelector(".topBar").querySelectorAll(".icon").forEach((icon) => {

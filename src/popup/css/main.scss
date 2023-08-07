@@ -217,7 +217,7 @@ body {
     .qr_downloadBtns {
         display: flex;
         align-items: center;
-        margin-top: 15px;
+        margin-top: 10px;
     }
 
     .downlaodBtn {
@@ -313,6 +313,8 @@ body {
     background-color: var(--grey-2);
     border-radius: 3px;
     width: 100%;
+
+    margin-top: 5px;
 
     .inputDiv {
         position: relative;
@@ -562,6 +564,36 @@ body {
                 &:hover {
                     cursor: pointer;
                 }
+            }
+        }
+
+        .screenshotBtn {
+            background-color: var(--blue-1);
+            padding: 0;
+            border: none;
+            flex-grow: 1;
+            border-radius: 7px;
+            padding: 12px;
+            color: var(--white-1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            transition: scale .2s ease-in-out;
+
+            svg {
+                height: 18px;
+                width: auto;
+                margin-right: 7px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                scale: .95;
             }
         }
     }

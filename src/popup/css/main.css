@@ -190,7 +190,7 @@ body {
 .qrCodeGenSec .qr_downloadBtns {
   display: flex;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .qrCodeGenSec .downlaodBtn {
   display: flex;
@@ -276,6 +276,7 @@ body {
   background-color: var(--grey-2);
   border-radius: 3px;
   width: 100%;
+  margin-top: 5px;
 }
 .content .inputDiv {
   position: relative;
@@ -474,6 +475,32 @@ body {
 }
 .qrCodeScanSec .scanMain #noCamAccessBanner #noCamAccessBtn:hover {
   cursor: pointer;
+}
+.qrCodeScanSec .scanMain .screenshotBtn {
+  background-color: var(--blue-1);
+  padding: 0;
+  border: none;
+  flex-grow: 1;
+  border-radius: 7px;
+  padding: 12px;
+  color: var(--white-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  transition: scale 0.2s ease-in-out;
+}
+.qrCodeScanSec .scanMain .screenshotBtn svg {
+  height: 18px;
+  width: auto;
+  margin-right: 7px;
+}
+.qrCodeScanSec .scanMain .screenshotBtn:hover {
+  cursor: pointer;
+}
+.qrCodeScanSec .scanMain .screenshotBtn:active {
+  scale: 0.95;
 }
 .qrCodeScanSec .scanBottom {
   margin-top: 15px;

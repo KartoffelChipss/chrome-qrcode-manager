@@ -9,9 +9,93 @@
       "message": "Einstellungen"
     },
     "options_webcam_title": {
-      "message": "Webcam Zugang"
+      "message": "Webcam Zugriff"
+    },
+    "options_permission_granted": {
+      "message": "Zugriff gewährt"
+    },
+    "options_permission_denied": {
+      "message": "Zugriff verwehrt!"
+    },
+    "options_permission_nocams": {
+      "message": "Es konnten keine Kameras gefunden werden!"
+    },
+    "options_permission_nocheck": {
+      "message": "Es ist ein Fehler beim überprüfen aufgetreten!"
     },
     "options_webcam_btn": {
       "message": "Klicken, um Zugang zur Webcam zu gewähren"
+    },
+    "options_webcam_btn_granted": {
+      "message": "Zugang bereits gewährt"
+    },
+    "options_webcam_allowchrome": {
+      "message": "Wie kann ich Google Chrome Zugriff auf meine Kamera geben?"
+    },
+    "options_webcam_help1_1": {
+      "message": "Öffne deine Windows Einstellungen"
+    },
+    "options_webcam_help1_2": {
+      "message": "Gehe zu 'Datenschutz & Sicherheit > Kamera'"
+    },
+    "options_webcam_help1_3": {
+      "message": "Schalten sie 'Zugriff auf Kamera', 'Apps den Zugriff auf Kamera erlauben' und 'Zulassen, dass Desktop apps auf Kamera zugreifen' ein"
+    },
+    "options_webcam_help1_4": {
+      "message": "Laden sie diese Seite neu"
+    },
+    "options_webcam_help2_title": {
+      "message": "Was wenn ich den Zugriff bereits abgelehnt habe?"
+    },
+    "options_webcam_help2_1": {
+      "message": "Mit dem Kamera Icon in der oberen rechten ecke deines Browsers kannst du die Kameraeinstellungen für diese Extension ändern."
+    },
+    "main_exebtn_gen": {
+      "message": "QR Code erstellen"
+    },
+    "main_exebtn_scan": {
+      "message": "QR Code scannen"
+    },
+    "main_modifier_title": {
+      "message": "Modifizieren"
+    },
+    "main_modifier_link": {
+      "message": "Link"
+    },
+    "main_gen_modifier_color1": {
+      "message": "Farbe #1"
+    },
+    "main_gen_modifier_color2": {
+      "message": "Farbe #2"
+    },
+    "main_gen_btns_url": {
+      "message": "URL"
+    },
+    "main_gen_btns_png": {
+      "message": "PNG"
+    },
+    "main_scan_selectimg": {
+      "message": "Bild auswählen"
+    },
+    "main_scan_contentdisplay": {
+      "message": "Der Inhalt des QR Codes wird hier angezeigt werden!"
+    },
+    "main_scan_defaultcam": {
+      "message": "Standard Kamera"
+    },
+    "main_scan_nocam": {
+      "message": "Du musst dieser Erweiterung Zugriff auf deine Kamera geben. Besuche dazu die "
+    },
+    "optionspage": {
+      "message": "Einstellungen"
+    },
+    "copiedtoclip": {
+      "message": "In die Zwischenablage kopiert!"
+    },
+    "noqrfound": {
+      "message": "Kein QR Code gefunden."
+    },
+    "main_scan_takescreenshot": {
+      "message": "Screenshot machen"
     }
 }

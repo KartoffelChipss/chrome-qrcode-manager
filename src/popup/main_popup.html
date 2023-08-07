@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <span class="banner" id="banner">Copied to clipboard!</span>
+    <span class="banner" id="banner" data-locale="copiedtoclip">Copied to clipboard!</span>
 
     <div class="topBar">
         <div class="section ">
@@ -25,19 +25,19 @@
     <div class="qrCodeGenSec" id="qrCodeGenSec">
         <img id="qrCode" src="">
 
-        <button class="collapsible" id="notShowingUpSec">Modifier</button>
+        <button class="collapsible" id="notShowingUpSec" data-locale="main_modifier_title">Modifier</button>
         <div class="content">
             <div class="inputDiv">
-                <label for="qr_url">Link</label>
+                <label for="qr_url" data-locale="main_modifier_link">Link</label>
                 <textarea id="qr_url">https://strassburger.org/</textarea>
             </div>
             <div class="colors">
                 <div class="inputDiv">
-                    <label for="qr_color_main">Color #1</label>
+                    <label for="qr_color_main" data-locale="main_gen_modifier_color1">Color #1</label>
                     <input type="color" id="qr_color_main" value="#000000">
                 </div>
                 <div class="inputDiv">
-                    <label for="qr_color_second">Color #2</label>
+                    <label for="qr_color_second" data-locale="main_gen_modifier_color2">Color #2</label>
                     <input type="color" id="qr_color_second" value="#ffffff">
                 </div>
             </div>
@@ -46,11 +46,11 @@
         <div class="qr_downloadBtns">
             <button id="qr_copyUrlBtn" class="downlaodBtn">
                 <svg width="99px" height="99px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14 12C14 14.7614 11.7614 17 9 17H7C4.23858 17 2 14.7614 2 12C2 9.23858 4.23858 7 7 7H7.5M10 12C10 9.23858 12.2386 7 15 7H17C19.7614 7 22 9.23858 22 12C22 14.7614 19.7614 17 17 17H16.5" stroke="#fefefe" stroke-width="2" stroke-linecap="round"></path> </g></svg>
-                URL
+                <span data-locale="main_gen_btns_url">URL</span>
             </button>
             <a href="#" id="qr_savePNGBtn" class="downlaodBtn" download="qrcode.png">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="1.2"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="1.0" fill-rule="evenodd" clip-rule="evenodd" d="M3 14.25C3.41421 14.25 3.75 14.5858 3.75 15C3.75 16.4354 3.75159 17.4365 3.85315 18.1919C3.9518 18.9257 4.13225 19.3142 4.40901 19.591C4.68577 19.8678 5.07435 20.0482 5.80812 20.1469C6.56347 20.2484 7.56459 20.25 9 20.25H15C16.4354 20.25 17.4365 20.2484 18.1919 20.1469C18.9257 20.0482 19.3142 19.8678 19.591 19.591C19.8678 19.3142 20.0482 18.9257 20.1469 18.1919C20.2484 17.4365 20.25 16.4354 20.25 15C20.25 14.5858 20.5858 14.25 21 14.25C21.4142 14.25 21.75 14.5858 21.75 15V15.0549C21.75 16.4225 21.75 17.5248 21.6335 18.3918C21.5125 19.2919 21.2536 20.0497 20.6517 20.6516C20.0497 21.2536 19.2919 21.5125 18.3918 21.6335C17.5248 21.75 16.4225 21.75 15.0549 21.75H8.94513C7.57754 21.75 6.47522 21.75 5.60825 21.6335C4.70814 21.5125 3.95027 21.2536 3.34835 20.6517C2.74643 20.0497 2.48754 19.2919 2.36652 18.3918C2.24996 17.5248 2.24998 16.4225 2.25 15.0549C2.25 15.0366 2.25 15.0183 2.25 15C2.25 14.5858 2.58579 14.25 3 14.25Z" fill="#fefefe"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 16.75C12.2106 16.75 12.4114 16.6615 12.5535 16.5061L16.5535 12.1311C16.833 11.8254 16.8118 11.351 16.5061 11.0715C16.2004 10.792 15.726 10.8132 15.4465 11.1189L12.75 14.0682V3C12.75 2.58579 12.4142 2.25 12 2.25C11.5858 2.25 11.25 2.58579 11.25 3V14.0682L8.55353 11.1189C8.27403 10.8132 7.79963 10.792 7.49393 11.0715C7.18823 11.351 7.16698 11.8254 7.44648 12.1311L11.4465 16.5061C11.5886 16.6615 11.7894 16.75 12 16.75Z" fill="#fefefe"></path> </g></svg>
-                PNG
+                <span data-locale="main_gen_btns_png">PNG</span>
             </a>
         </div>
     </div>
@@ -66,7 +66,7 @@
                 </path>
             </g>
         </svg>
-        Generate QR-Code
+        <span data-locale="main_exebtn_gen">Generate QR-Code</span>
     </button>
 
     <div class="qrCodeScanSec" id="qrCodeScanSec">
@@ -86,25 +86,33 @@
             <img src="" id="imagepreview" style="display: none;">
             <label for="image-upload" class="custom-file-upload">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#0fa3f7"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2639 15.9375L12.5958 14.2834C11.7909 13.4851 11.3884 13.086 10.9266 12.9401C10.5204 12.8118 10.0838 12.8165 9.68048 12.9536C9.22188 13.1095 8.82814 13.5172 8.04068 14.3326L4.04409 18.2801M14.2639 15.9375L14.6053 15.599C15.4112 14.7998 15.8141 14.4002 16.2765 14.2543C16.6831 14.126 17.12 14.1311 17.5236 14.2687C17.9824 14.4251 18.3761 14.8339 19.1634 15.6514L20 16.4934M14.2639 15.9375L18.275 19.9565M18.275 19.9565C17.9176 20 17.4543 20 16.8 20H7.2C6.07989 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4.12796 18.7313 4.07512 18.5321 4.04409 18.2801M18.275 19.9565C18.5293 19.9256 18.7301 19.8727 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V16.4934M4.04409 18.2801C4 17.9221 4 17.4575 4 16.8V7.2C4 6.0799 4 5.51984 4.21799 5.09202C4.40973 4.71569 4.71569 4.40973 5.09202 4.21799C5.51984 4 6.07989 4 7.2 4H16.8C17.9201 4 18.4802 4 18.908 4.21799C19.2843 4.40973 19.5903 4.71569 19.782 5.09202C20 5.51984 20 6.0799 20 7.2V16.4934M17 8.99989C17 10.1045 16.1046 10.9999 15 10.9999C13.8954 10.9999 13 10.1045 13 8.99989C13 7.89532 13.8954 6.99989 15 6.99989C16.1046 6.99989 17 7.89532 17 8.99989Z" stroke="#0fa3f7" stroke-width="1.08" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                Select image
+                <span data-locale="main_scan_selectimg">Select Image</span>
             </label>
             <input id="image-upload" type="file" accept="image/png, image/jpeg"/>
         </div>
 
+        <div class="scanMain" id="scan_from_screenshot">
+            <img src="" id="screenshotpreview" class="screenshotpreview" style="display: none;">
+            <button type="button" id="screenshotBtn" class="screenshotBtn">
+                <svg fill="#ffffff" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M155.676 1349.19v337.3c0 42.99 34.849 77.83 77.838 77.83h337.297V1920H233.514C104.548 1920 0 1815.45 0 1686.49v-337.3h155.676Zm1764.324 0v337.3c0 128.96-104.55 233.51-233.51 233.51h-337.3v-155.68h337.3c42.99 0 77.83-34.84 77.83-77.83v-337.3H1920ZM960 544.865c229.27 0 415.14 185.862 415.14 415.135 0 229.27-185.87 415.14-415.14 415.14-229.273 0-415.135-185.87-415.135-415.14 0-229.273 185.862-415.135 415.135-415.135ZM1686.49 0C1815.45 0 1920 104.548 1920 233.514v337.297h-155.68V233.514c0-42.989-34.84-77.838-77.83-77.838h-337.3V0ZM570.811 0v155.676H233.514c-42.989 0-77.838 34.849-77.838 77.838v337.297H0V233.514C0 104.548 104.548 0 233.514 0h337.297Z"></path> </g></svg>
+                <span data-locale="main_scan_takescreenshot">Take screenshot</span>
+            </button>
+        </div>
+
         <div class="scanMain" id="scan_from_video">
-            <span id="noCamAccessBanner" style="display: none;">You need to grant this extension camera access on the <span id="noCamAccessBtn">Option page</span>!</span>
+            <span id="noCamAccessBanner" style="display: none;"><span data-locale="main_scan_nocam">You need to grant this extension camera access on the</span> <span id="noCamAccessBtn" data-locale="optionspage">Option page</span>!</span>
 
             <div id="video-container">
                 <video id="qr-video"></video>
             </div>
 
             <select id="cam-list">
-                <option value="environment" selected>Default Camera</option>
+                <option value="environment" selected data-locale="main_scan_defaultcam">Default Camera</option>
             </select>
         </div>
 
         <div class="scanBottom">
-            <span id="scan-output">The content of the QR Code will be displayed here!</span>
+            <span id="scan-output" data-locale="main_scan_contentdisplay">The content of the QR Code will be displayed here!</span>
         </div>
     </div>
 
@@ -122,7 +130,7 @@
                     style="fill: #fefefe;"></path>
             </g>
         </svg>
-        Scan QR-Code
+        <span data-locale="main_exebtn_scan">Scan QR-Code</span>
     </button>
 
     <span id="activeModule" style="display: none;">none</span>

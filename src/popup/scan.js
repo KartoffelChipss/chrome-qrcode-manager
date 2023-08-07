@@ -5,12 +5,17 @@ const imageUpload = document.getElementById("image-upload");
 
 const scan_from_image = document.getElementById("scan_from_image");
 const scan_from_video = document.getElementById("scan_from_video");
+const scan_from_screenshot= document.getElementById("scan_from_screenshot");
 
 const video = document.getElementById('qr-video');
 const videoContainer = document.getElementById('video-container');
 const camList = document.getElementById('cam-list');
 
+const screenshotBtn = document.getElementById("screenshotBtn");
+const screenshotpreview = document.getElementById("screenshotpreview");
+
 let currentTab = "image";
+let lastScreenshot = 0;
 
 document.getElementById("decodeQRCodeBtn").addEventListener("click", (event) => {
     if (activeModule.innerHTML !== "scan") {
@@ -57,6 +62,7 @@ document.getElementById("gnerateQRCodeBtn").addEventListener("click", (event) =>
 
 document.getElementById("scan_image_btn").addEventListener("click", (event) => {
     scan_from_image.classList.add("shown");
+    scan_from_screenshot.classList.remove("shown");
     scan_from_video.classList.remove("shown");
 
     document.getElementById("scan_image_btn").classList.add("selected");
@@ -72,6 +78,7 @@ document.getElementById("scan_image_btn").addEventListener("click", (event) => {
 
 document.getElementById("scan_screenshot_btn").addEventListener("click", (event) => {
     scan_from_image.classList.remove("shown");
+    scan_from_screenshot.classList.add("shown");
     scan_from_video.classList.remove("shown");
 
     document.getElementById("scan_image_btn").classList.remove("selected");
@@ -87,6 +94,7 @@ document.getElementById("scan_screenshot_btn").addEventListener("click", (event)
 
 document.getElementById("scan_webcam_btn").addEventListener("click", (event) => {
     scan_from_image.classList.remove("shown");
+    scan_from_screenshot.classList.remove("shown");
     scan_from_video.classList.add("shown");
 
     document.getElementById("scan_image_btn").classList.remove("selected");
@@ -113,7 +121,7 @@ document.getElementById("noCamAccessBtn").addEventListener("click", (event) => {
 });
 
 function setResult(label, result) {
-    console.log(result.data);
+    //console.log(result.data);
     label.innerHTML = result.data;
     //camQrResultTimestamp.textContent = new Date().toString();
     //label.style.color = 'teal';
@@ -132,12 +140,12 @@ imageUpload.addEventListener('change', event => {
 
     QrScanner.scanImage(file, { returnDetailedScanResult: true })
         .then(result => setResult(scanOutput, result))
-        .catch(e => setResult(scanOutput, { data: e || 'No QR code found.' }));
+        .catch(e => setResult(scanOutput, { data: e || getLocale("noqrfound") }));
 });
 
 scanOutput.addEventListener("click", (event) => {
     navigator.clipboard.writeText(scanOutput.innerText);
-    showBanner("Copied to clipboard!", 3 * 1000);
+    showBanner(getLocale("copiedtoclip"), 3 * 1000);
 });
 
 QrScanner.hasCamera().then(hasCamera => console.log(hasCamera))
@@ -160,10 +168,25 @@ scanner.start().then(() => {
     }));
 
     scanner.stop();
-
-    console.log(scanner._active)
 });
 
 camList.addEventListener('change', event => {
     scanner.setCamera(event.target.value);
+});
+
+
+/* --- Screenshot --- */
+
+screenshotBtn.addEventListener("click", () => {
+    let now = new Date().getTime();
+    if (lastScreenshot > now - 500) return;
+    chrome.tabs.captureVisibleTab(null, {}, function (image) {
+        lastScreenshot = now;
+        screenshotpreview.src = image;
+        screenshotpreview.style.display = "block";
+
+        QrScanner.scanImage(image, { returnDetailedScanResult: true })
+            .then(result => setResult(scanOutput, result))
+            .catch(e => setResult(scanOutput, { data: e || getLocale("noqrfound") }));
+    });
 });

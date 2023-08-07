@@ -11,7 +11,91 @@
     "options_webcam_title": {
       "message": "Webcam Access"
     },
+    "options_permission_granted": {
+      "message": "Permission granted!"
+    },
+    "options_permission_denied": {
+      "message": "Permission denied!"
+    },
+    "options_permission_nocams": {
+      "message": "Could not find any cameras!"
+    },
+    "options_permission_nocheck": {
+      "message": "Cannot check for permission!"
+    },
     "options_webcam_btn": {
       "message": "Click to grant video permission"
+    },
+    "options_webcam_btn_granted": {
+      "message": "Permission already granted"
+    },
+    "options_webcam_allowchrome": {
+      "message": "How to allow Google Chrome to access your camera"
+    },
+    "options_webcam_help1_1": {
+      "message": "Open your Windows Settings"
+    },
+    "options_webcam_help1_2": {
+      "message": "Go to 'Privacy & security > Camera'"
+    },
+    "options_webcam_help1_3": {
+      "message": "Enable 'Camera access', 'Let apps access your camera' and 'Let desktop apps access your camera'"
+    },
+    "options_webcam_help1_4": {
+      "message": "Reload this page"
+    },
+    "options_webcam_help2_title": {
+      "message": "What if I already denied access?"
+    },
+    "options_webcam_help2_1": {
+      "message": "If you click the camera icon in the top right corner you can choose to allow access to your camera."
+    },
+    "main_exebtn_gen": {
+      "message": "Generate QR Code"
+    },
+    "main_exebtn_scan": {
+      "message": "Scan QR Code"
+    },
+    "main_modifier_title": {
+      "message": "Modifier"
+    },
+    "main_modifier_link": {
+      "message": "Link"
+    },
+    "main_gen_modifier_color1": {
+      "message": "Color #1"
+    },
+    "main_gen_modifier_color2": {
+      "message": "Color #2"
+    },
+    "main_gen_btns_url": {
+      "message": "URL"
+    },
+    "main_gen_btns_png": {
+      "message": "PNG"
+    },
+    "main_scan_selectimg": {
+      "message": "Select Image"
+    },
+    "main_scan_contentdisplay": {
+      "message": "The content of the QR Code will be displayed here!"
+    },
+    "main_scan_defaultcam": {
+      "message": "Default Camera"
+    },
+    "main_scan_nocam": {
+      "message": "You need to grant this extension camera access on the "
+    },
+    "optionspage": {
+      "message": "Option page"
+    },
+    "copiedtoclip": {
+      "message": "Copied to clipboard!"
+    },
+    "noqrfound": {
+      "message": "No QR code found."
+    },
+    "main_scan_takescreenshot": {
+      "message": "Take screenshot"
     }
 }

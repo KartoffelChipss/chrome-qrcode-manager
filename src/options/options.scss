@@ -168,6 +168,7 @@ main {
 
             &.disabled {
                 filter: grayscale(1);
+                display: none;
 
                 &:hover {
                     cursor: default;
@@ -181,7 +182,7 @@ main {
 
         button.collapsible {
             max-width: 90%;
-            width: 500px;
+            width: 550px;
             margin-top: 15px;
             background-color: rgba(255, 255, 255, 15%);
             color: var(--white-1);
@@ -225,7 +226,7 @@ main {
             padding: 0 18px;
             background-color: rgba(255, 255, 255, 5%);
             max-width: calc(90% - 18px * 2);
-            width: calc(500px - 18px * 2);
+            width: calc(550px - 18px * 2);
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.2s ease-out;
